@@ -1,0 +1,46 @@
+
+
+
+public class inicialesCapitales {
+
+	public String aInicialesCapitales(String phrase) {
+		// TODO put your code below this comment
+    if (phrase == "" || phrase == null){
+    
+      return null;
+    
+    }
+    
+    
+    
+    String [] words = phrase.split(" ");
+    
+    StringBuilder buffer = new StringBuilder();
+    for (String word : words){
+    
+       char initial = word.charAt(0);
+        initial = Character.toUpperCase(word.charAt(0));  
+        buffer.append(initial);
+        word = word.substring(1,word.length());
+        buffer.append(word);
+        buffer.append(" ");
+        
+       
+    
+       
+     
+        
+       
+     
+      
+        
+    }
+     
+     int indexLastSpace = buffer.lastIndexOf(" ");
+     buffer.deleteCharAt(indexLastSpace);
+     System.out.println(buffer.toString());
+     return buffer.toString();
+        
+		
+	}
+}
